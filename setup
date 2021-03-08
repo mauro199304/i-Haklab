@@ -115,29 +115,7 @@ else
 	exit
 fi
 
-#::::::::::Installation of Ohmyfish::::::::::::#
-curl -Ls http://get.oh-my.fish | fish
-echo "if status --is-login" >> $PREFIX/etc/fish/config.fish
-echo "bash /data/data/com.termux/files/usr/var/log/login-termux" >> $PREFIX/etc/fish/config.fish
-echo "end" >> $PREFIX/etc/fish/config.fish
-echo "" >> $PREFIX/etc/fish/config.fish
-echo "function on_exit --on-event fish_exit" >> $PREFIX/etc/fish/config.fish
-echo "echo 'Have a nice hacking day!!'" >> $PREFIX/etc/fish/config.fish
-echo "sleep 1" >> $PREFIX/etc/fish/config.fish
-echo "end" >> $PREFIX/etc/fish/config.fish
-echo "" >> $PREFIX/etc/fish/config.fish
-echo "set fish_theme bobthefish" >> $PREFIX/etc/fish/config.fish
-echo "set HOME /data/data/com.termux/files/home" >> $PREFIX/etc/fish/config.fish
-echo "set GOPATH /data/data/com.termux/files/home/go" >> $PREFIX/etc/fish/config.fish
-echo "alias LOCALHOST=\"ifconfig wlan0 | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 255\"" >> $PREFIX/etc/fish/config.fish
-echo "alias serverapache=\"apachectl\"" >> $PREFIX/etc/fish/config.fish
-echo "alias postgresql=\"pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql\"" >> $PREFIX/etc/fish/config.fish
-echo "alias traductor=\"gawk -f (curl -Ls git.io/translate | psub) -- -shell\"" >> $PREFIX/etc/fish/config.fish
-echo "" >> $PREFIX/etc/fish/config.fish
-sed -i "22a set iHAKLAB $iHAKLAB" $PREFIX/etc/fish/config.fish
-bash $iHAKLAB/.set/to-install/functions
-bash $iHAKLAB/.set/to-install/i-Haklab_login
-gem install fortune
+
 if [ -e ~/ivam3-Haklab ]; then
 	rm ~/ivam3-Haklab
 fi
